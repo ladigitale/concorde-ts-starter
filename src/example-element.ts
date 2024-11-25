@@ -1,7 +1,7 @@
-import { html, LitElement } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import Fetcher from "@supersoniks/concorde/core/mixins/Fetcher";
-import Subscriber from "@supersoniks/concorde/core/mixins/Subscriber";
+import {html, LitElement} from "lit";
+import {customElement, property} from "lit/decorators.js";
+import Fetcher from "@supersoniks/concorde/mixins/Fetcher";
+import Subscriber from "@supersoniks/concorde/mixins/Subscriber";
 /**
  * Exemple d'implémentation de fetcher pour afficher des données venant d'un service
  * l'url du service est configurées dans index.html mais pourrait être inscrite ici via la propriété dataProvider
@@ -11,7 +11,6 @@ export class ExempleElement extends Fetcher(Subscriber(LitElement)) {
   @property() email = "";
   @property() first_name = "";
   @property() last_name = "";
-
 
   render() {
     return html` <div>
